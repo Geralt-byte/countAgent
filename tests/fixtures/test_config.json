@@ -1,0 +1,17 @@
+{
+  "agents": {
+    "defaults": {
+      "model": "deepseek-v4-pro",
+      "max_tokens": 4096,
+      "max_tool_iterations": 5,
+      "context_window_tokens": 128000
+    }
+  },
+  "providers": {
+    "deepseek": {
+      "api_key": "sk-9938f4ce50ff42cabfdefff0f88c115a",
+      "api_base": "https://api.deepseek.com",
+      "backend": "openai_compat"
+    }
+  }
+}
