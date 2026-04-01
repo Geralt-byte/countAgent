@@ -8,7 +8,7 @@ from typing import Any
 from loguru import logger
 
 from countagent.providers.base import LLMProvider
-from countagent.session.manager import Session, SessionManager
+from countagent.infra.sessions.manager import Session, SessionManager
 from countagent.utils.helpers import truncate_text
 
 WEBUI_SESSION_METADATA_KEY = "webui"

@@ -12,10 +12,10 @@ from typing import TYPE_CHECKING, Any, Literal
 
 from pydantic import Field
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.command.builtin import build_help_text
+from countagent.commands.builtin import build_help_text
 from countagent.config.paths import get_media_dir
 from countagent.config.schema import Base
 from countagent.utils.helpers import safe_filename, split_message

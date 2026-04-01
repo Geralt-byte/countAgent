@@ -39,8 +39,8 @@ except ImportError as e:
         "Matrix dependencies not installed. Run: pip install countagent-ai[matrix]"
     ) from e
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.config.paths import get_data_dir, get_media_dir
 from countagent.config.schema import Base

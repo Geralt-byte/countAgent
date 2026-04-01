@@ -16,8 +16,8 @@ from typing import Any, Literal
 from loguru import logger
 from pydantic import Field
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.config.schema import Base
 

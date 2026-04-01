@@ -24,10 +24,10 @@ from telegram.error import BadRequest, NetworkError, TimedOut
 from telegram.ext import Application, CallbackQueryHandler, ContextTypes, MessageHandler, filters
 from telegram.request import HTTPXRequest
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.command.builtin import build_help_text
+from countagent.commands.builtin import build_help_text
 from countagent.config.paths import get_media_dir
 from countagent.config.schema import Base
 from countagent.security.network import validate_url_target

@@ -29,10 +29,10 @@ from websockets.exceptions import ConnectionClosed
 from websockets.http11 import Request as WsRequest
 from websockets.http11 import Response
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.command.builtin import builtin_command_palette
+from countagent.commands.builtin import builtin_command_palette
 from countagent.config.paths import get_media_dir
 from countagent.config.schema import Base
 from countagent.utils.helpers import safe_filename
@@ -42,7 +42,7 @@ from countagent.utils.media_decode import (
 )
 
 if TYPE_CHECKING:
-    from countagent.session.manager import SessionManager
+    from countagent.infra.sessions.manager import SessionManager
 
 
 def _strip_trailing_slash(path: str) -> str:

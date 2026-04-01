@@ -8,8 +8,8 @@ from typing import Any
 
 from loguru import logger
 
-from countagent.bus.events import InboundMessage, OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import InboundMessage, OutboundMessage
+from countagent.core.bus import MessageBus
 
 
 class BaseChannel(ABC):

@@ -17,8 +17,8 @@ from lark_oapi.api.im.v1.model import MentionEvent, P2ImMessageReceiveV1
 from lark_oapi.core.const import FEISHU_DOMAIN, LARK_DOMAIN
 from pydantic import Field
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.config.paths import get_media_dir
 from countagent.config.schema import Base

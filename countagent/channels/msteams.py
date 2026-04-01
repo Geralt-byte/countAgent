@@ -34,8 +34,8 @@ except ImportError:  # pragma: no cover
 import httpx
 from pydantic import Field
 
-from countagent.bus.events import OutboundMessage
-from countagent.bus.queue import MessageBus
+from countagent.core.bus import OutboundMessage
+from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.config.paths import get_workspace_path
 from countagent.config.schema import Base
