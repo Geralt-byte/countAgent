@@ -10,7 +10,7 @@ from loguru import logger
 
 from countagent.memory.store import MemoryStore
 from countagent.engine.runner import AgentRunner, AgentRunSpec
-from countagent.engine.spec import AgentRunResult
+from countagent.engine.runner import AgentRunResult
 from countagent.tools.registry import ToolRegistry
 from countagent.utils.helpers import truncate_text
 from countagent.utils.prompt_templates import render_template

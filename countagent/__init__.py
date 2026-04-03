@@ -4,6 +4,7 @@ countagent - A lightweight AI agent framework
 
 from countagent._version import __version__
 
+__logo__ = "🤖"
 __all__ = ["CountAgent", "RunResult", "__version__"]
 
 

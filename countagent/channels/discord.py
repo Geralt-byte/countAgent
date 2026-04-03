@@ -16,8 +16,8 @@ from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.commands.builtin import build_help_text
-from countagent.config.paths import get_media_dir
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_media_dir
+from countagent.infra.config.schema import Base
 from countagent.utils.helpers import safe_filename, split_message
 
 DISCORD_AVAILABLE = importlib.util.find_spec("discord") is not None

@@ -37,8 +37,8 @@ from pydantic import Field
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.paths import get_workspace_path
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_workspace_path
+from countagent.infra.config.schema import Base
 
 MSTEAMS_AVAILABLE = (
     importlib.util.find_spec("jwt") is not None

@@ -17,7 +17,7 @@ from pydantic import Field
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.schema import Base
+from countagent.infra.config.schema import Base
 from countagent.security.network import validate_resolved_url, validate_url_target
 
 DINGTALK_MAX_REMOTE_MEDIA_BYTES = 20 * 1024 * 1024
@@ -713,7 +713,7 @@ class DingTalkChannel(BaseChannel):
         sender_id: str,
     ) -> str | None:
         """Download a DingTalk file to the media directory, return local path."""
-        from countagent.config.paths import get_media_dir
+        from countagent.infra.config.paths import get_media_dir
 
         try:
             token = await self._get_access_token()

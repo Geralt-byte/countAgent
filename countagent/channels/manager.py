@@ -13,7 +13,7 @@ from loguru import logger
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.schema import Config
+from countagent.infra.config.schema import Config
 from countagent.utils.restart import consume_restart_notice_from_env, format_restart_completed_message
 
 if TYPE_CHECKING:

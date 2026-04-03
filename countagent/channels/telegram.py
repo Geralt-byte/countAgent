@@ -28,8 +28,8 @@ from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.commands.builtin import build_help_text
-from countagent.config.paths import get_media_dir
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_media_dir
+from countagent.infra.config.schema import Base
 from countagent.security.network import validate_url_target
 from countagent.utils.helpers import split_message
 

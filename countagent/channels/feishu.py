@@ -20,8 +20,8 @@ from pydantic import Field
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.paths import get_media_dir
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_media_dir
+from countagent.infra.config.schema import Base
 from countagent.utils.logging_bridge import redirect_lib_logging
 
 FEISHU_AVAILABLE = importlib.util.find_spec("lark_oapi") is not None

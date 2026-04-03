@@ -19,7 +19,7 @@ from pydantic import Field
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.schema import Base
+from countagent.infra.config.schema import Base
 
 
 class WhatsAppConfig(Base):
@@ -33,7 +33,7 @@ class WhatsAppConfig(Base):
 
 
 def _bridge_token_path() -> Path:
-    from countagent.config.paths import get_runtime_subdir
+    from countagent.infra.config.paths import get_runtime_subdir
 
     return get_runtime_subdir("whatsapp-auth") / "bridge-token"
 
@@ -316,7 +316,7 @@ def _ensure_bridge_setup() -> Path:
     Returns the bridge directory. Raises RuntimeError if npm is not found
     or bridge cannot be built.
     """
-    from countagent.config.paths import get_bridge_install_dir
+    from countagent.infra.config.paths import get_bridge_install_dir
 
     user_bridge = get_bridge_install_dir()
     stamp_file = user_bridge / ".countagent-bridge-source-hash"

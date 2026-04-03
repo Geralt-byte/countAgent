@@ -16,7 +16,8 @@ from loguru import logger
 from countagent.engine.auto_compact import AutoCompact
 from countagent.engine.context_builder import ContextBuilder
 from countagent.core.hook import AgentHook, AgentHookContext, CompositeHook
-from countagent.memory.store import Consolidator, Dream
+from countagent.memory.consolidator import Consolidator
+from countagent.memory.dream import Dream
 from countagent.engine.runner import _MAX_INJECTIONS_PER_TURN, AgentRunner, AgentRunSpec
 from countagent.resources.skills_loader import BUILTIN_SKILLS_DIR
 from countagent.engine.subagent import SubagentManager
@@ -40,7 +41,8 @@ from countagent.tools.spawn import SpawnTool
 from countagent.tools.web import WebFetchTool, WebSearchTool
 from countagent.core.bus import InboundMessage, OutboundMessage
 from countagent.core.bus import MessageBus
-from countagent.commands.router import CommandContext, CommandRouter, register_builtin_commands
+from countagent.commands.router import CommandContext, CommandRouter
+from countagent.commands.builtin import register_builtin_commands
 from countagent.infra.config.schema import AgentDefaults
 from countagent.providers.base import LLMProvider
 from countagent.providers.factory import ProviderSnapshot

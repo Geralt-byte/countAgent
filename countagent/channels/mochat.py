@@ -15,8 +15,8 @@ import httpx
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.paths import get_runtime_subdir
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_runtime_subdir
+from countagent.infra.config.schema import Base
 from pydantic import Field
 
 try:

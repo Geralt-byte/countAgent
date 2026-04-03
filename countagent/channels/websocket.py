@@ -33,8 +33,8 @@ from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
 from countagent.commands.builtin import builtin_command_palette
-from countagent.config.paths import get_media_dir
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_media_dir
+from countagent.infra.config.schema import Base
 from countagent.utils.helpers import safe_filename
 from countagent.utils.media_decode import (
     FileSizeExceeded,
@@ -158,7 +158,7 @@ def _http_json_response(data: dict[str, Any], *, status: int = 200) -> Response:
 def _read_webui_model_name() -> str | None:
     """Return the configured default model for readonly webui display."""
     try:
-        from countagent.config.loader import load_config
+        from countagent.infra.config.loader import load_config
 
         model = load_config().agents.defaults.model.strip()
         return model or None
@@ -677,7 +677,7 @@ class WebSocketChannel(BaseChannel):
         return _http_json_response({"sessions": cleaned})
 
     def _settings_payload(self, *, requires_restart: bool = False) -> dict[str, Any]:
-        from countagent.config.loader import get_config_path, load_config
+        from countagent.infra.config.loader import get_config_path, load_config
         from countagent.providers.registry import PROVIDERS, find_by_name
 
         config = load_config()
@@ -720,7 +720,7 @@ class WebSocketChannel(BaseChannel):
     def _handle_settings_update(self, request: WsRequest) -> Response:
         if not self._check_api_token(request):
             return _http_error(401, "Unauthorized")
-        from countagent.config.loader import load_config, save_config
+        from countagent.infra.config.loader import load_config, save_config
         from countagent.providers.registry import find_by_name
 
         query = _parse_query(request.path)

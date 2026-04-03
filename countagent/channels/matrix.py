@@ -42,8 +42,8 @@ except ImportError as e:
 from countagent.core.bus import OutboundMessage
 from countagent.core.bus import MessageBus
 from countagent.channels.base import BaseChannel
-from countagent.config.paths import get_data_dir, get_media_dir
-from countagent.config.schema import Base
+from countagent.infra.config.paths import get_data_dir, get_media_dir
+from countagent.infra.config.schema import Base
 from countagent.utils.helpers import safe_filename
 from countagent.utils.logging_bridge import redirect_lib_logging
 
